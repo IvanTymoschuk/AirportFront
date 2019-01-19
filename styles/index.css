@@ -1,0 +1,46 @@
+body {
+    background-image: url("http://bgfons.com/upload/clouds_texture2882.jpg");
+    display: flex;
+    
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+#divlogo{
+   
+    font-size: 5em;
+    text-align: center;
+    font-weight: bold;
+    vertical-align: middle;
+   
+}
+main {
+    flex: 1 0 auto;
+  }
+.space{
+    margin-top: 10rem;
+    background-color: azure;
+    font-weight: bolder;
+    color: black;
+
+    font-size: 2rem;
+    opacity: 10%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+label{
+    color: azure;
+}
+ a{
+    text-decoration:none !important;
+}
+
+h2{
+    color: gray;
+    text-align: center;
+    font-weight: bolder;
+
+}

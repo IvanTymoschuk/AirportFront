@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Airport</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="styles/style.css">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="scripts/indexscript.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+        
+    </head>
+<body >
+  
+
+    <div class="navbar-fixed">
+    <nav class="nav-extended black" id="nav"> 
+        <div class="nav-wrapper">
+          <a  class="brand-logo">Rivne International Airport</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="index.html">Home</a></li>
+            <li><a href="Authorization.html">Sign In</a></li>
+            <li><a href="Registration.html">Sign Up</a></li>
+            <li><a href="info.html">About Us</a></li>
+          </ul>
+        </div>
+        <div class="nav-content">
+          <ul class="tabs tabs-transparent">
+            <li class="tab"><a class="active" href="#nav">Home</a></li>
+            
+              
+            <li class="tab"><a  href="#infocard">Info</a></li>
+            <li class="tab"><a  href="#googleMap">Location</a></li>
+   
+          </ul>
+        </div>
+      </nav>
+      
+    </div>
+    <br>
+    <br>
+    <a id="start"></a>
+<div class="container" >
+<img class="d-block w-100"   src="img/2.png" alt="First slide">
+</div>
+
+
+   
+<div class="conrainer d-none d-md-block" onscroll="myFunction()">
+        <div class="col s12 m6" id="infocard">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Airport Info</span>
+              <p>
+       
+                    <strong>Rivne International Airport</strong> is an airport in Rivne, Ukraine. Recently LOT Polish Airlines has been in talks with the consideration of opening a Warsaw route after Bravo Airways ended flights.</p>
+            
+                <p>
+                        By 2016, the airport brings together 16 services and departments serving passengers, freight transport, charter flights, cafes, road freight transport, wholesale fuel trade. The company employs more than 100 employees.
+                        
+                        
+                        Hall of the airport "Rivne"
+                        On July 10, 2016, for the first time in the last 10 years, a passenger flight on the route Rivne-Antalya was performed. (Excluding charter non-scheduled private aviation flights). Since then, Bravo Airways has been performing weekly Sunday flights on the specified route on both sides. The customer of the charter flights is the tour operator TPG.</p>
+              <p>The airport was created in the days of the USSR. It is located 8 km from the center of Rivne, practically within the city. Near the airport are motorways (in particular, E-40), which allows you to get to the train station, bus station and city center in a matter of minutes.
+            
+                    The airport covers an area of ​​170 hectares. It has two runways: one long 2626 m and a width of 42 m, the other - 655 m. As of 2016, only the first of the bands is in working condition. At the airport there are: ticket offices for ticket sales, airline offices, customs control point, border post, transportation service, official delegations hall, airlift service. At the station square there are: a 24-hour paid car park guarded, a cafe. Near the airport is Sofia Hotel. The city also has the hotels "Mir", "Ukraine", "Khutir" and others.
+                    
+                    The airport operates from 8:00 to 17:00 (on request of airlines - round the clock).</p>
+               
+            
+            </div>
+            <div class="card-action">
+              <a href="info.html">More...</a>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container">
+<div class="row">
+  <div class=" col-xl-3 col-sm-6">
+ 
+    <a class="waves-effect waves-light col xl12  btn-large red white-text" href="tickets.html">Book ticket</a>
+
+  </div>
+  <div class=" col-xl-3 col-sm-6">
+    
+      <a class="waves-effect waves-light col xl12  btn-large yellow black-text" href="planes.html">Our planes</a>
+    
+    </div>
+    <div class="col-xl-3 col-sm-6 ">
+        
+        <a class="waves-effect waves-light col xl12  btn-large green" href="schedule.html">Schedule </a>
+      
+      </div>
+      <div class="col-xl-3 col-sm-6">
+         
+          <a class="waves-effect col xl12  waves-light btn-large blue" href="map.html">Department</a>
+       
+        </div>
+</div>
+</div>
+
+
+
+
+
+            <div id="googleMap" style="width:100%;height:800px;"></div>
+
+
+
+
+    <footer class="page-footer black">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">Rivne International Airport</h5>
+            
+              <a class="grey-text text-lighten-4 right" href="mapper.html">More Links</a>
+            </div>
+           
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+          © 2019 Copyright Text
+          
+          </div>
+        </div>
+      </footer>
+
+
+
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0bYRtl8-ZpQ-Y2wwto78kRIxrwRk_1Io&callback=myMap"></script>
+    
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.15/js/mdb.min.js"></script>
+     
+</body>
+</html>

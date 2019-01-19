@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sign In</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="scripts/auth.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+</head>
+<body >
+
+
+    <div class="container space" >
+        <h2>Authorization</h2>
+
+        <form class="col s12" onsubmit="Send();return false;">
+
+            <div class="row">
+                <div class="input-field col s12 xl12">
+                    <input id="email" type="email" class="validate ">
+                    <label for="email">Email</label>
+                </div>
+            </div>
+
+          <div class="row">
+            <div class="input-field col s12 xl12">
+              <input id="password" type="password" class="validate ">
+              <label for="password">Password</label>
+            </div>
+          </div>
+
+
+            <div class="row">
+                <div class="container">
+                <div class="input-field col xl1 push-xl9">
+                    <input type="reset" class="waves-effect waves-light btn gray" value="Clear">
+                </div>
+                    <div class="input-field col xl1 push-xl10">
+                        <input type="button" onclick="location.href='Registration.html'" class="btn waves-effect waves-light" value="Sign Up" >
+                    </div>
+
+                <div class="input-field col xl1 push-xl11">
+                    <input type="submit" class="waves-effect waves-light btn blue"  value="Sign In">
+                </div>
+
+                </div>
+            </div>
+
+        </form>
+      </div>
+    </div>
+
+</body>
+</html>

@@ -12,14 +12,14 @@ $(function () {
         },
         password: {
           required: true,
-          minlength: 4,
+          minlength: 8,
         }
        
         
       },
       messages: {
        
-        email: 'Enter a valid email',
+        email: 'Email must be valid',
         password: {
           minlength: 'Password must be at least 4 characters long'
         }

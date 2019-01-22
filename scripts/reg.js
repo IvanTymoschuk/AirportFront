@@ -12,7 +12,7 @@ $(function () {
         },
         password: {
           required: true,
-          minlength: 4,
+          minlength: 8,
         },
         cpassword: {
             equalTo: "#password"
@@ -25,14 +25,14 @@ $(function () {
         
       },
       messages: {
-        first_name: 'This field is required',
-        last_name: 'This field is required',
-        email: 'Enter a valid email',
+        first_name: 'First Name is required',
+        last_name: 'Last Name field is required',
+        email: 'Email is not valid',
         password: {
           minlength: 'Password must be at least 4 characters long'
         },
-        cpassword: 'Password fields must be equal',
-        Birthdate:'This field is required'
+        cpassword: 'Confirm password fields must be equal',
+        Birthdate:'Birthdate is required'
 
       },
       submitHandler: function (form) {

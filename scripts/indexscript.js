@@ -1,4 +1,6 @@
-
+$(document).ready(function(){
+    $('.parallax').parallax();
+  });
 function myMap() {
     var mapProp= {
         center:new google.maps.LatLng(50.596701, 26.156060),

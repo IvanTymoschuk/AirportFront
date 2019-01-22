@@ -28,7 +28,7 @@ namespace DAL
     {
         protected override void Seed(DBase db)
         {
-            db.Users.Add(new User() { BirthDate = "01-01-2019", Card = null, Email = "root@root.com", FName = "GG", Gender = false, LName = "LOX", orders = null });
+            db.Users.Add(new User() { BirthDate = DateTime.Now, Card = null, Email = "root@root.com", FName = "GG", Gender = false, LName = "LOX", orders = null });
            
             db.SaveChanges();
         }

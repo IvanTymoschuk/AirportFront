@@ -29,7 +29,7 @@ namespace DAL
         protected override void Seed(DBase db)
         {
             db.Users.Add(new User() { BirthDate = DateTime.Now, Card = null, Email = "root@root.com", FName = "GG", Gender = false, LName = "LOX", orders = null });
-           
+            db.Flights.Add(new Flight() { Count=1, Date=DateTime.Now, From = "123", ID=1, Plen="1337-228", To="me" });
             db.SaveChanges();
         }
     }

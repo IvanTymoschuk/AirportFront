@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,53 +14,61 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="scripts/auth.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    
+
+
 </head>
-<body >
+
+<body>
 
 
-    <div class="container space" >
+    <div class="container space">
         <h2>Authorization</h2>
 
         <form class="col s12" id="auth_form">
 
             <div class="row">
                 <div class="input-field col s12 xl12">
+                    <i class="material-icons prefix">email</i>
                     <input id="email" type="email" name="email" class="validate ">
                     <label class="active" for="email">Email</label>
-                    
+
                 </div>
             </div>
 
-          <div class="row">
-            <div class="input-field col s12 xl12">
-              <input id="password" type="password" name="password" class="validate ">
-              <label class="active" for="password">Password</label>
-              
+            <div class="row">
+                <div class="input-field col s12 xl12">
+                    <i class="material-icons prefix">lock</i>
+
+                    <input id="password" type="password" name="password" class="validate ">
+                    <label class="active" for="password">Password</label>
+
+                </div>
             </div>
-          </div>
 
 
             <div class="row">
                 <div class="container">
-                <div class="input-field col xl1 push-xl9">
-                    <input type="reset" class="waves-effect waves-light btn gray" value="Clear">
-                </div>
+                    <div class="input-field col xl1 push-xl9">
+                        <input type="reset" class="waves-effect waves-light btn gray" value="Clear">
+                    </div>
                     <div class="input-field col xl1 push-xl10">
-                        <input type="button" onclick="location.href='Registration.html'" class="btn waves-effect waves-light" value="Sign Up" >
+                        <input type="button" onclick="location.href='Registration.html'" class="btn waves-effect waves-light"
+                            value="Sign Up">
                     </div>
 
-                <div class="input-field col xl1 push-xl11">
-                    <input type="submit" class="waves-effect waves-light btn blue"  value="Sign In">
-                </div>
+                    <div class="input-field col xl1 push-xl11">
+                        <input type="submit" class="waves-effect waves-light btn blue" value="Sign In">
+                    </div>
 
                 </div>
             </div>
 
         </form>
-      </div>
+    </div>
     </div>
 
 </body>
+
 </html>

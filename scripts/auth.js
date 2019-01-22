@@ -27,18 +27,20 @@ $(function () {
       },
       submitHandler: function (form) {
         //form.submit();
+        
         $.ajax({
-          url: "", 
+          url: `http://localhost:54617/Services.svc/Airoport/API/Auth/Login?Email=${$("#email").val()}&password=${$("#password").val()}`, 
           data: $(form).serialize(),
           success: function(data){
-
-
-
+            alert($("#email").val()+" "+$("#password").val());
+            alert(data.LoginResult.Messege);
+        if(data.LoginResult.Messege==="OK")
+        window.location.href = "index.html";
             
-            window.location.href = "index.html";
+            
           },
-          error: function(){
-
+          error: function(request, status, error){
+              alert(request.responseText);
           }
         }
 

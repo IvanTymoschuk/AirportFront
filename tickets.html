@@ -10,6 +10,7 @@
     
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link rel="stylesheet" href="styles/style.css">
+        <script src="scripts/ticket.js"></script>
        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
@@ -37,6 +38,14 @@
         
             <form>
                     <div class="container">
+                      <div class="row  ticket_info">
+                        <label>Time: </label>
+                        <p id="time">00:00</p>
+                        <div class="col xl6"></div>
+                        <label>Places: </label>
+                        <p id="places">200</p>
+                        
+                      </div>
                 <label for="cityfrom">From</label>
                 <select id="cityfrom" class="form-control form-control-lg">
                         <option>Rivne</option>
@@ -78,7 +87,21 @@
                                               </p>
                                               
                                     </div>
-                                    <button type="submit" class="btn btn-primary col-12">Confirm order</button>
+
+
+                                    
+                                    <a  class="btn btn-primary col-12" href="#modal1">Confirm order</a>
+
+                                  
+                                <div id="modal1" class="modal bottom-sheet">
+                                    <div class="modal-content">
+                                      <h4>Modal Header</h4>
+                                      <p>A bunch of text</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                                    </div>
+                                  </div>
 
             </form>
         </div>

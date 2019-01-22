@@ -26,11 +26,29 @@ $(function () {
 
       },
       submitHandler: function (form) {
-        form.submit();
-        window.location.href = "index.html";
+        //form.submit();
+        $.ajax({
+          url: "", 
+          data: $(form).serialize(),
+          success: function(data){
+
+
+
+            
+            window.location.href = "index.html";
+          },
+          error: function(){
+
+          }
+        }
+
+        )
+      
   
       }
     });
+
+
   })
 
 

@@ -15,6 +15,9 @@ body {
 h2{
     text-align: center;
 }
+#boldstyle{
+    font-weight: bold;
+}
  main {
     flex: 1 0 auto;
   }

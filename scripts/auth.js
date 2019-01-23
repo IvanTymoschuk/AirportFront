@@ -9,6 +9,8 @@ $(function () {
         email: {
           required: true,
           email: true,
+         
+                     
         },
         password: {
           required: true,
@@ -21,7 +23,7 @@ $(function () {
        
         email: 'Email must be valid',
         password: {
-          minlength: 'Password must be at least 4 characters long'
+          minlength: 'Password must be at least 8 characters long'
         }
 
       },
@@ -30,13 +32,13 @@ $(function () {
         
         $.ajax({
           url: `http://localhost:54617/Services.svc/Airoport/API/Auth/Login?Email=${$("#email").val()}&password=${$("#password").val()}`, 
-          data: $(form).serialize(),
+      
           success: function(data){
-            alert($("#email").val()+" "+$("#password").val());
-            alert(data.LoginResult.Messege);
+          
         if(data.LoginResult.Messege==="OK")
         window.location.href = "index.html";
-            
+        else
+        $("#error").html("dich");
             
           },
           error: function(request, status, error){

@@ -16,6 +16,8 @@
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>   
  
   <script src="http://momentjs.com/downloads/moment.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.js"></script>
+
   <script src="scripts/ticket.js"></script>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -77,19 +79,19 @@
       
           <p>
             <label>
-              <input name="group1" type="radio" checked />
+              <input name="group1" type="radio" value="3" />
               <span>Buisness class</span>
             </label>
           </p>
           <p>
             <label>
-              <input name="group1" type="radio" checked />
+              <input name="group1" type="radio" value="2" checked />
               <span>Standart</span>
             </label>
           </p>
           <p>
             <label>
-              <input name="group1" type="radio" checked />
+              <input name="group1" type="radio" value="1" />
               <span>Econom class</span>
             </label>
           </p>
@@ -98,25 +100,35 @@
 
 
 
-        <a class="btn btn-primary col s12 modal-trigger" href="#modal1">Confirm</a>
+        <a class="btn btn-primary col s12 modal-trigger"  id="confirm" href="#modal1">Confirm</a>
 
 
         <div id="modal1" class="modal bottom-sheet">
           <div class="modal-content">
-            
-           
-            <h4 > Confirm order</h4>
-            <div class="input-field col s12 xl6 ">
+        
+        
+            <h4> Confirm order</h4>
+            <div class="row">
+        <form id="forma">
+              <div class="input-field col s12 xl8">
                 <i class="material-icons prefix">credit_card</i>
-      
-                <input id="card" name="card"  type="tel" class="validate">
-                <label for="card">Card</label>
+        
+                <input id="credit_card" type="text" name="credit_card"  class="validate">
+                <label for="credit_card">Card</label>
               </div>
-
-            
+            </form>
+              <div class="col s12 xl4 alignright">
+                <label>Price </label>
+                <h3 class="header" id="price ">200</h3>
+              </div>
+            </div>
+            <div class="row">
+            <div id="main_info"></div>
+          </div>
+        
           </div>
           <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat"><i class="material-icons">done</i> Agree</a>
+            <a href="#!" id="agree" class="modal-close waves-effect waves-green btn-flat text-center green"> Agree</a>
           </div>
         </div>
 

@@ -9,6 +9,9 @@ body {
     background-color: whitesmoke;
     padding: 3rem;
 }
+#main_info{
+    font-size: 2rem;
+}
 .alignright{
     text-align: right;
 }

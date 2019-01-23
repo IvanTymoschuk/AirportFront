@@ -36,10 +36,34 @@ $(function () {
 
       },
       submitHandler: function (form) {
-        form.submit();
-        window.localStorage.setItem("Login",$('email').val());
+
+
+        $.ajax({
+          url: 
+          `http://localhost:54617/Services.svc/Airoport/API/Auth/Register?lname=${$("#last_name").val()}&fname=${$("#first_name").val()}
+          &email=${$("#email").val()}&birthdate=${$("#Birthdate").val()}&gender=${$('input[type=radio][name=Gender]:checked').val()}&pass=${$("#password").val()}`, 
+      
+          success: function(data){
+          
+        if(data.LoginResult.Messege==="OK"){
+          window.localStorage.setItem("Login",$('email').val());
         window.localStorage.setItem("Password",$('password').val());
         window.location.href = "Authorization.html";
+       
+        }
+        
+        else
+        alert(data.LoginResult.Messege);
+       // $("#error").html("dich");
+            
+          },
+          error: function(request, status, error){
+              alert(request.responseText);
+          }
+        }
+
+        )
+        
   
       }
     });

@@ -18,5 +18,11 @@ namespace BLL
         public int Count { get; set; }
         [DataMember]
         public string Plen { get; set; }
+        [DataMember]
+        public decimal PriceEconom { get; set; }
+        [DataMember]
+        public decimal PriceStandart { get; set; }
+        [DataMember]
+        public decimal PriceBussines { get; set; }
     }
 }

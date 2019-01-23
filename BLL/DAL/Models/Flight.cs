@@ -9,5 +9,8 @@ namespace DAL
         public DateTime Date { get; set; } = DateTime.Now;
         public int Count { get; set; }
         public string Plen { get; set; }
+        public decimal PriceEconom { get; set; }
+        public decimal PriceStandart { get; set; }
+        public decimal PriceBussines { get; set; }
     }
 }

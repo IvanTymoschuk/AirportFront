@@ -4,7 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Web;
 
-namespace BLL.Models
+namespace BLL
 {
     [DataContract]
     public class SendOrder

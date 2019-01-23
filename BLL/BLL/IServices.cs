@@ -36,5 +36,21 @@ namespace BLL
            ResponseFormat = WebMessageFormat.Json,
          UriTemplate = "/API/Data/GetAllFlight")]
         IEnumerable<FlightDTO> GetAllFlight();
+
+        [OperationContract]
+        [WebInvoke(Method = "GET",
+       RequestFormat = WebMessageFormat.Json,
+       BodyStyle = WebMessageBodyStyle.Wrapped,
+         ResponseFormat = WebMessageFormat.Json,
+       UriTemplate = "/API/Data/SET/SetCard?Email={Email}&Card={Card}")]
+       string SetCard(string Email, string Card);
+
+        [OperationContract]
+        [WebInvoke(Method = "GET",
+      RequestFormat = WebMessageFormat.Json,
+      BodyStyle = WebMessageBodyStyle.Wrapped,
+        ResponseFormat = WebMessageFormat.Json,
+         UriTemplate = "/API/Data/SET/MakeOrder?Email={Email}&Card={Card}&Class={Class}&IdFlight={IdFlight}")]
+        SendOrder MakeOrder(string Email, string Card, int Class, int IdFlight);
     }
 }

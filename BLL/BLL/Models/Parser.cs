@@ -10,7 +10,7 @@ namespace BLL
         public static UserDTO ToUserDTO(User u)
         {
 
-            if (u.orders.Count == 0)
+            if (u.orders==null)
             {
                 return new UserDTO()
                 {
@@ -48,7 +48,7 @@ namespace BLL
         }
         public static User ToUser (UserDTO u)
         {
-            if (u.orders.Count == 0)
+            if (u.orders==null)
             {
                 return new User()
                 {
@@ -119,7 +119,10 @@ namespace BLL
                 Date = f.Date,
                 ID = f.ID,
                 Plen = f.Plen,
-                To = f.To
+                To = f.To,
+                PriceBussines = f.PriceBussines,
+                PriceEconom = f.PriceEconom,
+                PriceStandart = f.PriceStandart
             };
         }
 
@@ -132,7 +135,10 @@ namespace BLL
                 Date = f.Date,
                 ID = f.ID,
                 Plen = f.Plen,
-                To = f.To
+                To = f.To,
+                PriceBussines = f.PriceBussines,
+                PriceEconom = f.PriceEconom,
+                PriceStandart = f.PriceStandart
             };
         }
 

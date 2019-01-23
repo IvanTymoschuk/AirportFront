@@ -10,11 +10,7 @@ body {
     flex: 1 0 auto;
   }
 
-.ticket_info{
-     font-size: 4rem !important;
-     color: black !important;
-     
-}
+
 .space{
     margin-top: 10rem;
     background-color: azure;

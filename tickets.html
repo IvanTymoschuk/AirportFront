@@ -7,16 +7,17 @@
   <title>Airport</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-    crossorigin="anonymous">
+ 
+  <link rel="stylesheet" href="styles/ticket.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link rel="stylesheet" href="styles/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>   
+ 
+ 
   <script src="scripts/ticket.js"></script>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-
 </head>
 
 <body>
@@ -35,41 +36,48 @@
 
     </nav>
   </div>
+
   <main>
 
 
-
+<h2 class="header">Booking ticket</h2>
     <form>
-      <div class="container">
+      <div  id="main_form" class="container">
         <div class="row  ticket_info">
-          <label>Time: </label>
-          <p id="time">00:00</p>
-          <div class="col xl6"></div>
-          <label>Places: </label>
-          <p id="places">200</p>
+          <div class="col s6">
+            <label>Time: </label>
+            <h3 class="header" id="time">00:00</h3>
+          </div>
 
+          <div class="col s6 alignright">
+            <label>Places: </label>
+            <h3 class="header" id="places">200</h3>
+          </div>
         </div>
-        <label for="cityfrom">From</label>
-        <select id="cityfrom" class="form-control form-control-lg">
-          <option>Rivne</option>
-          <option>Rome</option>
-          <option>Istanbul</option>
+        
+        <div  class="input-field col s12">
+          <select id="cityfrom">
+         
+            
+        
+          </select>
+          <label>From</label>
+        </div>
 
-          <option>Kyiv</option>
 
-        </select>
+        <div  class="input-field col s12">
+          <select>
+            <option value="" disabled selected>Choose your destination</option>
+        
+          </select>
+          <label>To</label>
+        </div>
 
-        <label for="cityto">To</label>
-        <select id="cityto" class="form-control form-control-lg">
-          <option>Rivne</option>
-          <option>Rome</option>
-          <option>Istanbul</option>
 
-          <option>Kyiv</option>
 
-        </select>
+
         <div class="container">
-          <br>
+      
           <p>
             <label>
               <input name="group1" type="radio" checked />
@@ -93,22 +101,33 @@
 
 
 
-        <a class="btn btn-primary col-12" href="#modal1">Confirm order</a>
+        <a class="btn btn-primary col s12 modal-trigger" href="#modal1">Confirm</a>
 
 
         <div id="modal1" class="modal bottom-sheet">
           <div class="modal-content">
-            <h4>Modal Header</h4>
-            <p>A bunch of text</p>
+            
+           
+            <h4 > Confirm order</h4>
+            <div class="input-field col s12 xl6 ">
+                <i class="material-icons prefix">credit_card</i>
+      
+                <input id="card" name="card"  type="tel" class="validate">
+                <label for="card">Card</label>
+              </div>
+
+            
           </div>
           <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat"><i class="material-icons">done</i> Agree</a>
           </div>
         </div>
 
     </form>
     </div>
   </main>
+
+  
   <footer class="page-footer black">
     <div class="container">
       <div class="row">
@@ -127,12 +146,7 @@
       </div>
     </div>
   </footer>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous"></script>
+
 </body>
 
 </html>

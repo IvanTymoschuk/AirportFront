@@ -19,7 +19,7 @@ namespace BLL
         [DataMember]
         public string FName { get; set; }
         [DataMember]
-        public DateTime BirthDate { get; set; }
+        public string BirthDate { get; set; }
         [DataMember]
         public string Email { get; set; }
         [DataMember]

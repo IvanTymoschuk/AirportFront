@@ -16,7 +16,7 @@ namespace BLL
        = AspNetCompatibilityRequirementsMode.Allowed)]
     public class Services : IServices
     {
-        public SendUser Register(string lname, string fname, string email, DateTime birthdate, bool gender, string pass)
+        public SendUser Register(string lname, string fname, string email, string birthdate, bool gender, string pass)
         {
             try
             {

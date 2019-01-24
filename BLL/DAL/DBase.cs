@@ -28,7 +28,7 @@ namespace DAL
     {
         protected override void Seed(DBase db)
         {
-            db.Users.Add(new User() { BirthDate = DateTime.Now, Card = null, Email = "root@root.com", FName = "GG", Gender = false, LName = "LOX", orders = null, Password="1" });
+            db.Users.Add(new User() { BirthDate = "10-10-1998", Card = null, Email = "root@root.com", FName = "GG", Gender = false, LName = "LOX", orders = null, Password="1" });
             db.Flights.Add(new Flight() { Count=1, Date=DateTime.Now, From = "Rivne", ID=1, Plen="1337-228", To="Kyiv", PriceBussines=1, PriceEconom=1, PriceStandart=1 });
             db.Flights.Add(new Flight() { Count = 1, Date = DateTime.Now, From = "Rivne", ID = 1, Plen = "1337-228", To = "Londom", PriceBussines = 100, PriceEconom = 110, PriceStandart = 120 });
 

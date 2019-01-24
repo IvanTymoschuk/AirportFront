@@ -18,7 +18,7 @@ namespace BLL
               ResponseFormat = WebMessageFormat.Json,
               BodyStyle = WebMessageBodyStyle.Wrapped,
               UriTemplate = "/API/Auth/Register?lname={lname}&fname={fname}&email={email}&birthdate={birthdate}&gender={gender}&pass={pass}")]
-        SendUser Register(string lname, string fname, string email, DateTime birthdate, bool gender,string pass);
+        SendUser Register(string lname, string fname, string email, string birthdate, bool gender,string pass);
 
         [OperationContract]
         [WebInvoke(Method = "GET",

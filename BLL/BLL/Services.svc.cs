@@ -131,6 +131,9 @@ namespace BLL
                 }
                 else
                     return new SendOrder { Messege = "INVALID CLASS", Order = null };
+                if(_context.Flights.FirstOrDefault(x => x.ID == IdFlight).Count==0)
+                    return new SendOrder { Messege = "Count == 0", Order = null };
+                _context.Flights.FirstOrDefault(x => x.ID == IdFlight).Count -= 1;
                 OrderDTO order = new OrderDTO()
                 {
                     Class = _class,

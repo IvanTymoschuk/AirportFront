@@ -42,6 +42,14 @@ namespace BLL
        RequestFormat = WebMessageFormat.Json,
        BodyStyle = WebMessageBodyStyle.Wrapped,
          ResponseFormat = WebMessageFormat.Json,
+       UriTemplate = "/API/Data/GetFlightByID?ID={ID}")]
+        FlightDTO GetFlightById(int ID);
+
+        [OperationContract]
+        [WebInvoke(Method = "GET",
+       RequestFormat = WebMessageFormat.Json,
+       BodyStyle = WebMessageBodyStyle.Wrapped,
+         ResponseFormat = WebMessageFormat.Json,
        UriTemplate = "/API/Data/SET/SetCard?Email={Email}&Card={Card}")]
        string SetCard(string Email, string Card);
 

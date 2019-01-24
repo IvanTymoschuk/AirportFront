@@ -135,18 +135,33 @@ namespace BLL
                 {
                     Class = _class,
                     Date = DateTime.Now,
-                    flight = Parser.ToFlightDTO(_context.Flights.FirstOrDefault(x => x.ID == IdFlight)),
+                    FlightID = _context.Flights.FirstOrDefault(x => x.ID == IdFlight).ID,
                     Price = _price,
-                    user = Parser.ToUserDTO(_context.Users.FirstOrDefault(x => x.Email == Email))
+                    UserID = _context.Users.FirstOrDefault(x => x.Email == Email).ID,
                 };
 
-                _context.Orders.Add(Parser.ToOrder(order));
+                _context.Users.FirstOrDefault(x => x.Email == Email).orders.Add(Parser.ToOrder(order));
                 _context.SaveChanges();
                 return new SendOrder { Messege = "OK", Order = order };
             }
             else
             {
                 return new SendOrder { Messege = "CARD NO SAVED", Order = null};
+            }
+        }
+
+     
+
+        FlightDTO IServices.GetFlightById(int ID)
+        {
+           try
+            {
+                DBase _context = new DBase();
+                return Parser.ToFlightDTO(_context.Flights.FirstOrDefault(x => x.ID == ID));
+            }
+            catch(Exception)
+            {
+                return null;
             }
         }
     }

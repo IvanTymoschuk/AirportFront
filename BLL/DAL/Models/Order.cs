@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DAL
 {
@@ -9,9 +10,10 @@ namespace DAL
         public DateTime Date { get; set; }  = DateTime.Now;
         public decimal Price { get; set; }
         public string Class { get; set; }
-
-        public virtual User user { get; set; }
-        public virtual Flight flight { get; set; }
+        [ForeignKey("User")]
+        public int UserID { get; set; }
+        [ForeignKey("Flight")]
+        public int FlightID { get; set; }
 
     }
 }

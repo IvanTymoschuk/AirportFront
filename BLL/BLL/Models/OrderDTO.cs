@@ -16,9 +16,9 @@ namespace BLL
         public string Class { get; set; }
 
         [DataMember]
-        public virtual UserDTO user { get; set; }
+        public int UserID { get; set; }
         [DataMember]
-        public virtual FlightDTO flight { get; set; }
+        public int FlightID { get; set; }
 
     }
 }

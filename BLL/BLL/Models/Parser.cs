@@ -91,9 +91,9 @@ namespace BLL
                 Class = o.Class,
                 Date = o.Date,
                 ID = o.ID,
-                flight = ToFlightDTO(o.flight),
+                FlightID = o.FlightID,
                 Price = o.Price,
-                user = ToUserDTO(o.user)
+                UserID = o.UserID,
             };
         }
 
@@ -104,9 +104,9 @@ namespace BLL
                 Class = o.Class,
                 Date = o.Date,
                 ID = o.ID,
-                flight = ToFlight(o.flight),
+                FlightID = o.FlightID,
                 Price = o.Price,
-                user = ToUser(o.user)
+                UserID = o.UserID,
             };
         }
 

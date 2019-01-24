@@ -83,8 +83,8 @@ namespace BLL
 
         string IServices.SetCard(string Email, string Card)
         {
-            //try
-            //{
+            try
+            {
 
                 DBase _context = new DBase();
                 if (_context.Users.FirstOrDefault(x => x.Email == Email) != null)
@@ -94,12 +94,12 @@ namespace BLL
                     return "CARD HAS BEEN SAVED";
                 }
                  return "ACCAUNT WITH EMAIL: " + Email + " NOT FOUND";
-            //}
-            //catch (Exception)
-            //{
-            //    return "SERVER FATAL ERROR (#_#)";
-            //}
         }
+            catch (Exception)
+            {
+                return "SERVER FATAL ERROR (#_#)";
+            }
+}
 
   
 

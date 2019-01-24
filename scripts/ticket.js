@@ -49,28 +49,35 @@ $(function () {
 
         $("#main_info").html(`<p><b>${name}</b> <span>  ${n}</span></p>`)
 
+        $("#price").html()
         $("#agree").click(function () {
            
 
                if($("#credit_card").val()!=="")
                 {
                     var card = $("#credit_card").val();
-                    alert(typeof(id[0]));
+                    var login=window.localStorage.getItem("Login");
+                    
                     $.ajax(
                         {
-                            url: `http://localhost:54617/Services.svc/Airoport/API/Data/SET/MakeOrder?Email=aa@aa&Card=${card}&Class=${radioValue}&IdFlight=${id[0]}`,
+                            url: `http://localhost:54617/Services.svc/Airoport/API/Data/SET/MakeOrder?Email=${login}&Card=${card}&Class=${radioValue}&IdFlight=${id[0]}`,
                             type: "GET",
                             success: function (data) {
-                                if (data.LoginResult.Messege === "OK") {
+                                
+                                if (data.MakeOrderResult.Messege === "OK") {
                                     alert("Ordered!");
                                 }
                                 else
-                                    alert(data.LoginResult.Messege);
+                                    alert(data.MakeOrderResult.Messege);
 
-                            }
+                            },
+                            error: function(request, status, error){
+                                alert(request.responseText);
                         }
-                    )
                     }
+
+                    )
+                }
                     else
                     alert("Input card");
 

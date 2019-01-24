@@ -35,8 +35,13 @@ $(function () {
       
           success: function(data){
           
-        if(data.LoginResult.Messege==="OK")
+        if(data.LoginResult.Messege==="OK"){
+
+          window.localStorage.setItem("Login",$('#email').val());
+          window.localStorage.setItem("Password",$('#password').val());
         window.location.href = "index.html";
+        
+      }
         else
         $("#error").html("dich");
             

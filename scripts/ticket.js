@@ -97,6 +97,7 @@ $(function () {
                                 
                                 if (data.MakeOrderResult.Messege === "OK") {
                                     alert("Ordered!");
+                                    location.reload();
                                 }
                                 else
                                     alert(data.MakeOrderResult.Messege);

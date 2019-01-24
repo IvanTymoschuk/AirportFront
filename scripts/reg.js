@@ -37,7 +37,7 @@ $(function () {
       },
       submitHandler: function (form) {
 
-        alert(typeof($("#Birthdate").val()));
+        
 
         $.ajax({
           url: 

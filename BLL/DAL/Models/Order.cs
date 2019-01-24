@@ -10,9 +10,9 @@ namespace DAL
         public DateTime Date { get; set; }  = DateTime.Now;
         public decimal Price { get; set; }
         public string Class { get; set; }
-        [ForeignKey("User")]
+
         public int UserID { get; set; }
-        [ForeignKey("Flight")]
+ 
         public int FlightID { get; set; }
 
     }
